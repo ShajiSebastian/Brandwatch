@@ -9,19 +9,22 @@
 // ***********************************************
 //
 //
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
 
+const map = require("../e2e/pages/map");
 
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('googleMapSearch',(() => { 
+    cy.visit('/') // url is taking from cypress.config.js
+    cy.get('.CxJub').within(() => {
+      cy.contains('Accept all').click() //
+    })
+
+    //Verifying the invoked url
+    cy.url().should('contain', 'https://www.google.com/maps')
+
+    cy.get('#hArJGc').click()
+    cy.fixture('locations').then(function (testdata) {
+      cy.get(map.location1, { timeout: 8000 }).type(testdata.location1)
+      cy.get(map.location2).type(testdata.location2)
+
+    })
+ }))
