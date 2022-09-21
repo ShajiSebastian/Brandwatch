@@ -1,0 +1,14 @@
+{
+    "location1": "#sb_ifc51 > .tactile-searchbox-input",
+    "location2": "#sb_ifc52 > .tactile-searchbox-input",
+    "location3": "#sb_ifc53 > .tactile-searchbox-input",
+    "location4": "#sb_ifc54 > .tactile-searchbox-input",
+    "modeOfTravelCar": "[data-travel_mode='0'] > button > .OzmNAc",
+    "totalDistance": "h1 > span:nth-child(1) > span.hPzYFf > span",
+    "totalTime": "h1 > span:nth-child(1) > span:nth-child(1)",
+    "googleMap": ".MyME0d",
+    "addDestination": ".nhb85d > span",
+    "routeDetails": "#section-directions-trip-details-msg-0"
+
+    
+}
