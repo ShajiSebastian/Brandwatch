@@ -40,7 +40,7 @@ describe('Google map search', () => {
     })
   })
 
-  it('Getting distance and Time required to travel between Manchester and London by avoiding Motorways', () => {
+  it('Getting distance and Time required to travel between Manchester and Birmingham by avoiding Motorways', () => {
     cy.googleMapSearch()
     //Selecting mode of travel as car
     cy.get(map.modeOfTravelCar).click()
