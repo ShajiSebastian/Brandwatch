@@ -13,7 +13,8 @@
 const map = require("../e2e/pages/map");
 
 Cypress.Commands.add('googleMapSearch',(() => { 
-    cy.visit('/') // url is taking from cypress.config.js
+    // cy.visit('/abcd') // url is taking from cypress.config.js
+    cy.visit('https://www.google.com/maps')
     cy.get('.CxJub').within(() => {
       cy.contains('Accept all').click() //
     })

@@ -3,6 +3,11 @@ const commands = require("../support/commands");
 
 describe('Google map search', () => {
   it('Searching for Three locations', () => {
+
+    cy.get('.abcd').forEach((location.json) => {
+      cy.get(array())
+      
+    }
     cy.googleMapSearch()
     //Selecting mode of travel as car
     cy.get(map.modeOfTravelCar).click()
